@@ -1,5 +1,5 @@
 import isFunction from 'lodash/isFunction'
-import { create, locationSerialize } from 'redux-history-sync'
+import { createHistory, locationSerialize } from 'redux-history-sync'
 import { getLocation } from './util'
 
 export function mapStateToProps(state, ownProps) {
@@ -18,7 +18,7 @@ export function mapDispatchToProps(dispatch, ownProps) {
       ownProps.onClick(loc)
     }
     // Dispatch our event.
-    return dispatch(create(loc))
+    return dispatch(createHistory(loc))
   }
   return {
     onClick: handleClick,
