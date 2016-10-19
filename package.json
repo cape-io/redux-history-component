@@ -1,16 +1,16 @@
 {
-  "name": "redux-history-components",
+  "name": "redux-history-component",
   "version": "1.0.0",
-  "description": "React components for redux-history-sync",
+  "description": "React Link component for redux-history-sync",
   "homepage": "https://github.com/cape-io/redux-history-components",
   "author": "Kai Curry <kai@cape.io> (http://www.cape.io/)",
   "main": "lib/index",
   "repository": {
-    "url": "git@github.com:cape-io/redux-history-components.git",
+    "url": "git@github.com:cape-io/redux-history-component.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/cape-io/redux-history-components/issues"
+    "url": "https://github.com/cape-io/redux-history-component/issues"
   },
   "tags": [
     "react",
