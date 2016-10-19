@@ -1,0 +1,77 @@
+{
+  "name": "redux-history-components",
+  "version": "1.0.0",
+  "description": "React components for redux-history-sync",
+  "homepage": "https://github.com/cape-io/redux-history-components",
+  "author": "Kai Curry <kai@cape.io> (http://www.cape.io/)",
+  "main": "lib/index",
+  "repository": {
+    "url": "git@github.com:cape-io/redux-history-components.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/cape-io/redux-history-components/issues"
+  },
+  "tags": [
+    "react",
+    "redux",
+    "history"
+  ],
+  "keywords": [
+    "react",
+    "redux",
+    "history"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "mkdir -p lib && babel ./src -d lib",
+    "lint": "eslint src test",
+    "test": "npm run lint && npm run test:node",
+    "test:node": "babel-tape-runner test/**/*spec.js",
+    "test:browser": "karma start",
+    "test:cov": "npm run test:cov:browser && npm run test:cov:node && npm run test:cov:report",
+    "test:cov:node": "babel-node $(npm bin)/isparta cover $(npm bin)/_mocha report --dir ./coverage/node-coverage -- --recursive ./test/node",
+    "test:cov:browser": "COVERAGE=true karma start",
+    "test:cov:report": "$(npm bin)/istanbul report --dir ./coverage --include **/*coverage.json html text",
+    "prepublish": "npm run build"
+  },
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "cape-redux": "^1.4.2",
+    "classnames": "^2.2.3",
+    "lodash": "^4.5.1",
+    "react": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.2.1",
+    "redux-history-sync": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-lodash": "^3.2.8",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-polyfill": "^6.8.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "babel-register": "^6.5.2",
+    "babel-tape-runner": "^2.0.1",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-import": "^1.15.0",
+    "eslint-plugin-jsx-a11y": "^2.2.2",
+    "eslint-plugin-react": "^6.3.0",
+    "isparta": "^4.0.0",
+    "isparta-loader": "^2.0.0",
+    "react": "^15.1.0",
+    "redux-devtools": "^3.3.1",
+    "redux-devtools-dock-monitor": "^1.1.1",
+    "redux-devtools-log-monitor": "^1.0.11",
+    "tape": "^4.6.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10.0"
+  }
+}
