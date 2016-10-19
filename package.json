@@ -38,7 +38,7 @@
   "dependencies": {
     "babel-core": "^6.17.0",
     "cape-redux": "^1.4.2",
-    "classnames": "^2.2.3",
+    "classnames": "^2.2.5",
     "lodash": "^4.5.1",
     "react": "^15.3.2",
     "react-redux": "^4.4.5",
