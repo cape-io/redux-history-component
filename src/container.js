@@ -1,21 +1,10 @@
-import React, { PropTypes } from 'react'
-import { connect } from 'react-redux'
-import classnames from 'classnames'
 import isFunction from 'lodash/isFunction'
-import { create, locationSerialize, parseUrl } from 'redux-history-sync'
-
-// Really simple Link component to help transition from react-router.
+import { create, locationSerialize } from 'redux-history-sync'
+import { getLocation } from './util'
 
 export function mapStateToProps(state, ownProps) {
   return {
     href: ownProps.href || ownProps.to || locationSerialize(ownProps),
-  }
-}
-
-export function getLocation({ to, href, ...location }) {
-  return {
-    ...parseUrl(to || href),
-    ...location,
   }
 }
 
@@ -35,19 +24,3 @@ export function mapDispatchToProps(dispatch, ownProps) {
     onClick: handleClick,
   }
 }
-
-// Simply attaches the dispatch wrapped handleClick() above.
-function Link({ active, children, className, ...props }) {
-  return (
-    <a className={classnames({ active }, className)} {...props}>
-      {children}
-    </a>
-  )
-}
-Link.propTypes = {
-  active: PropTypes.bool,
-  children: PropTypes.node,
-  className: PropTypes.string,
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Link)
