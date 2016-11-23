@@ -1,6 +1,6 @@
 {
   "name": "redux-history-component",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React Link component for redux-history-sync",
   "homepage": "https://github.com/cape-io/redux-history-components",
   "author": "Kai Curry <kai@cape.io> (http://www.cape.io/)",
@@ -36,17 +36,17 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "babel-core": "^6.17.0",
-    "cape-redux": "^1.4.2",
+    "cape-redux": "^2.2.1",
     "classnames": "^2.2.5",
-    "lodash": "^4.5.1",
-    "react": "^15.3.2",
-    "react-redux": "^4.4.5",
+    "lodash": "^4.17.2",
+    "react": "^15.4.1",
+    "react-redux": "^4.4.6",
     "redux": "^3.2.1",
-    "redux-history-sync": "^3.0.1"
+    "redux-history-sync": "^3.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
+    "babel-core": "^6.17.0",
     "babel-eslint": "^7.0.0",
     "babel-loader": "^6.2.4",
     "babel-plugin-lodash": "^3.2.8",
