@@ -1,16 +1,24 @@
-import React, { PropTypes } from 'react'
+import { pick } from 'lodash'
+import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 // Really simple Link component to help transition from react-router.
-function Link({ active, children, className, ...props }) {
+function Link({ children, className, isActive, ...props }) {
   return (
-    <a className={classnames({ active }, className)} {...props}>
+    <a
+      className={classnames({ active: isActive }, className)}
+      {...pick(props, 'style', 'title')}
+    >
       {children}
     </a>
   )
 }
+<a href={getHref(props)} {...pick(rest, 'className', 'title')}>
+  <LinkContent {...props} />
+</a>
 Link.propTypes = {
-  active: PropTypes.bool,
+  isActive: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
 }

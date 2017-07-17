@@ -1,4 +1,7 @@
 # redux-history-component
-`import Link from 'redux-history-component'`
-...
-`<Link href="/foo" />`
+
+```javascript
+import Link from 'redux-history-component'
+
+const component = <Link routeId="foo" />
+```
