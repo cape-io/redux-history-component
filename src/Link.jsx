@@ -14,9 +14,7 @@ function Link({ children, className, isActive, ...props }) {
     </a>
   )
 }
-<a href={getHref(props)} {...pick(rest, 'className', 'title')}>
-  <LinkContent {...props} />
-</a>
+
 Link.propTypes = {
   isActive: PropTypes.bool,
   children: PropTypes.node,
