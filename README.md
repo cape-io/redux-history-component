@@ -5,5 +5,5 @@ Create links within app using props that pull from `location-info` and use `redu
 ```javascript
 import Link from 'redux-history-component'
 
-const component = <Link routeId="foo" />
+const component = <Link routeId="foo" arg1="bar" />
 ```

@@ -1,6 +1,6 @@
 {
   "name": "redux-history-component",
-  "version": "2.0.2",
+  "version": "2.1.1",
   "description": "React Link component for redux-history-sync",
   "homepage": "https://github.com/cape-io/redux-history-components",
   "author": "Kai Curry <kai@cape.io> (http://www.cape.io/)",
