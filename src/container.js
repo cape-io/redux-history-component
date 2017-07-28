@@ -1,4 +1,4 @@
-import { eq, get, isFunction, overArgs } from 'lodash/fp'
+import { eq, get, isFunction, overArgs, stubTrue } from 'lodash/fp'
 import { createStructuredSelector } from 'reselect'
 import { getHref } from 'location-info'
 import { createHistory } from 'redux-history-sync'
@@ -10,6 +10,7 @@ export const getIsActive = overArgs(eq, [getRouteId, get('routeId')])
 export const mapStateToProps = createStructuredSelector({
   href: getHref,
   isActive: getIsActive,
+  isInternal: stubTrue,
 })
 export function doCreateHistory(props) {
   return (dispatch, getState) => dispatch(createHistory(getHref(getState(), props)))
