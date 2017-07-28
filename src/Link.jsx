@@ -1,15 +1,16 @@
-import { pick } from 'lodash'
+import { pick } from 'lodash/fp'
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+const getValidProps = pick(['style', 'title', 'onClick'])
+function getClassNames({ isActive, className }) {
+  return classnames({ active: isActive }, className)
+}
 // Really simple Link component to help transition from react-router.
-function Link({ children, className, isActive, ...props }) {
+function Link({ children, ...props }) {
   return (
-    <a
-      className={classnames({ active: isActive }, className)}
-      {...pick(props, 'style', 'title')}
-    >
+    <a className={getClassNames(props)} {...getValidProps(props)}>
       {children}
     </a>
   )
@@ -17,8 +18,11 @@ function Link({ children, className, isActive, ...props }) {
 
 Link.propTypes = {
   isActive: PropTypes.bool,
-  children: PropTypes.node,
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
 }
-
+Link.defaultProps = {
+  isActive: false,
+  className: null,
+}
 export default Link

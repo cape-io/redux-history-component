@@ -1,6 +1,6 @@
 {
   "name": "redux-history-component",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "React Link component for redux-history-sync",
   "homepage": "https://github.com/cape-io/redux-history-components",
   "author": "Kai Curry <kai@cape.io> (http://www.cape.io/)",
@@ -31,9 +31,9 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "cape-routes": "^1.0.2",
+    "cape-routes": "^1.1.1",
     "classnames": "^2.2.5",
-    "location-info": "^4.1.1",
+    "location-info": "^4.2.0",
     "lodash": "^4.17.4",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
@@ -45,19 +45,19 @@
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-eslint": "^7.0.0",
-    "babel-loader": "^6.2.4",
+    "babel-loader": "^7.1.1",
     "babel-plugin-lodash": "^3.2.8",
     "babel-plugin-react-transform": "^2.0.2",
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-1": "^6.16.0",
     "babel-tape-runner": "^2.0.1",
-    "eslint": "^3.8.1",
-    "eslint-config-airbnb": "^12.0.0",
-    "eslint-plugin-babel": "^3.2.0",
-    "eslint-plugin-import": "^1.15.0",
-    "eslint-plugin-jsx-a11y": "^2.2.2",
-    "eslint-plugin-react": "^6.3.0",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0",
     "tape": "^4.6.0"
   }
 }

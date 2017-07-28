@@ -1,20 +1,11 @@
 import { eq, get, isFunction, overArgs } from 'lodash/fp'
 import { createStructuredSelector } from 'reselect'
-import { selectRoutes } from 'location-info'
+import { getHref } from 'location-info'
 import { createHistory } from 'redux-history-sync'
 import { getRouteId } from 'cape-routes'
 // import { getLocation } from './util'
 
-// @TODO Move this to location-info
-export function getHref(state, { routeId, ...props }) {
-  const pattern = get([routeId, 'pattern'], selectRoutes(state))
-  if (!pattern) { // Throw?
-    console.error(routeId, 'route not found')
-    return routeId
-  }
-  return pattern.stringify(props)
-}
-export const getIsActive = overArgs(eq, [getRouteId, get('routeid')])
+export const getIsActive = overArgs(eq, [getRouteId, get('routeId')])
 
 export const mapStateToProps = createStructuredSelector({
   href: getHref,
