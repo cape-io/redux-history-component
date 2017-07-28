@@ -3,9 +3,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-const getValidProps = pick(['style', 'title', 'onClick'])
-function getClassNames({ isActive, className }) {
-  return classnames({ active: isActive }, className)
+const getValidProps = pick(['href', 'onClick', 'style', 'title'])
+function getClassNames({ isActive, className, isInternal }) {
+  return classnames({ active: isActive, internal: isInternal }, className)
 }
 // Really simple Link component to help transition from react-router.
 function Link({ children, ...props }) {
