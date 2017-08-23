@@ -2,7 +2,7 @@ import { eq, get, isFunction, overArgs, stubTrue } from 'lodash/fp'
 import { createStructuredSelector } from 'reselect'
 import { getHref } from 'location-info'
 import { createHistory } from 'redux-history-sync'
-import { getRouteId } from 'cape-routes'
+import { getRouteId } from 'cape-router'
 // import { getLocation } from './util'
 
 export const getIsActive = overArgs(eq, [getRouteId, get('routeId')])
