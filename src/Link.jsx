@@ -1,6 +1,6 @@
-import { pick } from 'lodash/fp'
 import React from 'react'
 import PropTypes from 'prop-types'
+import { pick } from 'lodash/fp'
 import classnames from 'classnames'
 
 const getValidProps = pick(['href', 'onClick', 'style', 'title'])
